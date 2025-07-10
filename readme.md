@@ -1,5 +1,6 @@
 # Image-to-Braille
-# ==> [Test it out in your browser!](https://505e06b2.github.io/Image-to-Braille/)
+# ==> [Test it out in your browser!](https://ascii.sdcom.top) 
+# ==> [备用站](https://ascii.sdcom.asia)    
 
 标准(Standard):
 
