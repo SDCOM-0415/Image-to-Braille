@@ -44,6 +44,14 @@ function updateLanguage(lang) {
 		}
 	});
 	
+	// 更新仓库链接
+	const repoLink = document.getElementById('repoLink');
+	if (repoLink) {
+		repoLink.href = lang === 'zh' ? 
+			'https://cnb.cool/SDCOM/Image-to-Braille' : 
+			'https://github.com/SDCOM-0415/Image-to-Braille';
+	}
+	
 	// 更新title属性
 	document.querySelector('div[title]').setAttribute('title', lang === 'zh' ? '切换深色主题' : 'Toggle dark theme');
 	document.querySelectorAll('div[title]')[1].setAttribute('title', lang === 'zh' ? '黑白颜色反转' : 'Invert black with white');
