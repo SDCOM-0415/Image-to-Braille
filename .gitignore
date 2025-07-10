@@ -74,4 +74,3 @@ coverage/
 *.pid
 *.seed
 *.pid.lock
-*.txt
