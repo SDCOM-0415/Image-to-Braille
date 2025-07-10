@@ -32,8 +32,6 @@ $:
         cpus: 1
       imports: https://cnb.cool/BlueScreen-Studio/Tech/secrets/-/blob/sdcom/github.yml
       stages:
-        - name: Remove unwanted files
-          script: rm -rf .ide/ && rm .cnb.yml
         - name: Sync to github
           image: tencentcom/git-sync         
           settings:
