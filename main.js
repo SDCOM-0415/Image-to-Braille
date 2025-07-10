@@ -8,7 +8,7 @@ const settings = {
 	inverted: false,
 	dithering: false,
 	monospace: false,
-	language: "zh" // 默认语言设置为中文
+	language: navigator.language.startsWith('zh') ? "zh" : "en" // 根据浏览器语言设置默认语言
 }
 
 function setUIElement(selector, value) {
@@ -96,11 +96,13 @@ function initUI() {
 	}
 	
 	// 添加语言切换功能
-	document.querySelector('#switchLang').onclick = (e) => {
-		e.preventDefault();
-		const newLang = settings.language === 'zh' ? 'en' : 'zh';
+	document.querySelector('#langSelect').onchange = (e) => {
+		const newLang = e.target.value;
 		updateLanguage(newLang);
 	}
+	
+	// 设置选择框的初始值为当前语言
+	document.querySelector('#langSelect').value = settings.language;
 	
 	// 初始化语言
 	updateLanguage(settings.language);
